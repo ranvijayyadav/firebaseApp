@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 //import { withRouter } from 'react-router-dom';
 import { firebase } from './../../firebase';
-import ErrorBoundry from '../../containers/ErrorBoundry/ErrorBoundry';
 import { UserConsumer } from '../../context/UserContext'
 
 class Login extends Component {
