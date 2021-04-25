@@ -1,9 +1,9 @@
 {
     "private": true,
     "name": "example-monorepo",
-    "workspaces": ["packages/client", "packages/server"],
+    "workspaces": ["packages/web", "packages/server"],
     "scripts": {
-        "client":"yarn workspace client start",
+        "web":"yarn workspace web start",
         "server": "yarn workspace server start"
     }
  }
