@@ -8,7 +8,7 @@ const Header = (props) => {
     return (
         <UserConsumer>{({ loggedInUser }) =>
             <Navbar>
-                <Navbar.Brand href="/">Firebase App {JSON.stringify(loggedInUser)}</Navbar.Brand>
+                <Navbar.Brand href="/">Firebase App </Navbar.Brand>
 
             </Navbar>
         }
