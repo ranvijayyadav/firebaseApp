@@ -3,7 +3,8 @@ import Login from '../../containers/Login/Login';//components/Login';
 import Orders from './../../containers/Orders/Orders';
 import ErrorBoundry from '../../containers/ErrorBoundry/ErrorBoundry';
 import OrdersDetails from '../../components/OrderDetails/OrderDetails';
-
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 //import Error
 //import Footer from './../../components/Footer';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
@@ -20,14 +21,18 @@ function App() {
 		<ErrorBoundry>
 			<Router>
 				<UserProvider>
-
-					<Switch>
-						<Route exact path="/login" component={Login} />
-						<PrivateRoute path="/order" component={OrdersDetails} />
-						<PrivateRoute exact path='/' component={Orders} />
-						{/* <PrivateRoute exact path='/orders' component={Orders} /> */}
-					</Switch>
-
+					<div className="App">
+						<div className="container">
+							<Header />
+							<Switch>
+								<Route exact path="/login" component={Login} />
+								<PrivateRoute path="/order" component={OrdersDetails} />
+								<PrivateRoute exact path='/' component={Orders} />
+								{/* <PrivateRoute exact path='/orders' component={Orders} /> */}
+							</Switch>
+							<Footer />
+						</div>
+					</div>
 				</UserProvider>
 			</Router>
 		</ErrorBoundry>

@@ -30,7 +30,8 @@ class UserProvider extends React.Component {
           login: this.login,
           logout: this.logout,
           setOrder: this.setOrder,
-          order: this.state.order
+          order: this.state.order,
+          loggedInUser: this.loggedInUser
         }}
       >
         {this.props.children}

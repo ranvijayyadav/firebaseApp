@@ -4,22 +4,32 @@ exports[`App Should render app properly 1`] = `
 <ErrorBoundry>
   <BrowserRouter>
     <UserProvider>
-      <Switch>
-        <Route
-          component={[Function]}
-          exact={true}
-          path="/login"
-        />
-        <PrivateRoute
-          component={[Function]}
-          path="/order"
-        />
-        <PrivateRoute
-          component={[Function]}
-          exact={true}
-          path="/"
-        />
-      </Switch>
+      <div
+        className="App"
+      >
+        <div
+          className="container"
+        >
+          <Header />
+          <Switch>
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/login"
+            />
+            <PrivateRoute
+              component={[Function]}
+              path="/order"
+            />
+            <PrivateRoute
+              component={[Function]}
+              exact={true}
+              path="/"
+            />
+          </Switch>
+          <Footer />
+        </div>
+      </div>
     </UserProvider>
   </BrowserRouter>
 </ErrorBoundry>

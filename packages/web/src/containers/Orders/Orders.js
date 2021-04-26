@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { dataBase } from './../../firebase';
 import { Table } from 'react-bootstrap';
 import Order from '../../components/Order/Order';
+import './Orders.css'
 
 class Orders extends Component {
 
@@ -41,13 +42,13 @@ class Orders extends Component {
                 {
                     !orders.length ? (<div>loading</div>) :
 
-                        (<Table striped bordered hover variant="dark">
+                        (<Table responsive striped bordered hover variant="dark">
                             <thead>
                                 <tr >
-                                    <th>Title</th>
-                                    <th>Date</th>
-                                    <th>Address</th>
-                                    <th>Name</th>
+                                    <th className='table-text'>Title</th>
+                                    <th className='table-text'>Date</th>
+                                    <th lassName='table-text'>Address</th>
+                                    <th lassName='table-text'>Name</th>
                                 </tr>
                             </thead>
                             <tbody>
