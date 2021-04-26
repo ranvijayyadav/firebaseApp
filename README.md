@@ -19,11 +19,4 @@ Follow  instruction bellow to run applcation
 - Perform get/ post/ delete operation with provided postman collection 
 
 
-## README update: pending
-- FE: add env config //done
-    UX pending do afetr push to git
-- BE: add testing// done
-    add env config// partialy done
-    Restructing // pending
-
 

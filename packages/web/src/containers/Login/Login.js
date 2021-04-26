@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //import { withRouter } from 'react-router-dom';
 import { firebase } from './../../firebase';
 import { UserConsumer } from '../../context/UserContext'
+import './Login.css';
 
 class Login extends Component {
 	state = {
@@ -34,22 +35,29 @@ class Login extends Component {
 		return (
 
 			<UserConsumer>{({ login }) =>
-				<form onSubmit={(event) => this.handleSubmit(event, login)}>
 
-					<h3>Log in</h3>
+				<div className="auth-wrapper">
+					<div className="auth-inner">
 
-					<div className="form-group">
-						<label>Email</label>
-						<input type="email" className="form-control" placeholder="Enter email" name="email" value={email} onChange={this.handleInputChange} />
+						<form className="login-form" onSubmit={(event) => this.handleSubmit(event, login)}>
+
+							<h3>Log in</h3>
+
+							<div className="form-group">
+								<label>Email</label>
+								<input type="email" className="form-control" placeholder="Enter email" name="email" value={email} onChange={this.handleInputChange} />
+							</div>
+
+							<div className="form-group">
+								<label>Password</label>
+								<input type="password" name="password" value={password} onChange={this.handleInputChange} className="form-control" placeholder="Enter password" />
+							</div>
+
+							<button type="submit" className="btn btn-dark btn-lg btn-block log-in">Log in</button>
+						</form>
+
 					</div>
-
-					<div className="form-group">
-						<label>Password</label>
-						<input type="password" name="password" value={password} onChange={this.handleInputChange} className="form-control" placeholder="Enter password" />
-					</div>
-
-					<button type="submit" className="btn btn-dark btn-lg btn-block">Log in</button>
-				</form>
+				</div>
 			}
 			</UserConsumer>
 		);

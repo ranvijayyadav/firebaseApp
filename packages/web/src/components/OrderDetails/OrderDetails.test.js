@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Order from './Order';
-
+import OrderDetails from './OrderDetails';
 
 const orderMock = {
     order: {
@@ -21,9 +20,20 @@ const orderMock = {
     }
 };
 
-let wrapped = shallow(<Order order={orderMock} />);
-describe('Order', () => {
-    it("Should render Order properly", () => {
+
+const UserContext = React.createContext({ order: orderMock });
+let wrapped = shallow(
+    <UserContext.Provider
+        value={{
+            order: orderMock,
+        }}
+    >
+        <OrderDetails />
+    </UserContext.Provider>
+
+);
+describe('Order Details', () => {
+    it("Should render Order Details properly", () => {
         expect(wrapped).toMatchSnapshot();
     });
 })
