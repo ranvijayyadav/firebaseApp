@@ -4,7 +4,6 @@ import { Navbar } from 'react-bootstrap';
 
 
 const Header = (props) => {
-    debugger;
     return (
         <UserConsumer>{({ loggedInUser }) =>
             <Navbar>

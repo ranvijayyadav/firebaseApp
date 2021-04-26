@@ -12,7 +12,6 @@ class UserProvider extends React.Component {
   }
 
   login = (data) => {
-    debugger;
     this.setState({ isAuth: true, loggedInUser: data.user })
   }
 
