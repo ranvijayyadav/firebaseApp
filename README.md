@@ -6,7 +6,7 @@ Follow  instruction bellow to run applcation
 
 ## Frontend App(react)
 
-- Copy .env file at the root of Web folder
+- Create .env using web.env file given in email  at the root of Web folder `packages/web`
 - Run yarn web at project root folder or yarn start at `packages/web`
 - Open http://localhost:3000 in browser
 - Enter email and password to log in(use credential provided in task readme file)
@@ -14,7 +14,7 @@ Follow  instruction bellow to run applcation
 
 ## Backend App(Node)
 
-- Copy .env file at the root of server folder
+- Create .env using server.env file given in email at the root of server folder `packages/server`
 - Run yarn server at project root folder or yarn start at `packages/server` folder
 - Perform get/ post/ delete operation with provided postman collection 
 
